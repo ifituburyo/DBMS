@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Pigs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Manage Pigs</h1>
+    </header>
+    
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag Number</th>
+                    <th>Breed</th>
+                    <th>Birth Date</th>
+                    <th>Gender</th>
+                    <th>Current Weight</th>
+                    <th>Pen Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pig in pigs %}
+                    <tr>
+                        <td>{{ pig[0] }}</td>
+                        <td>{{ pig[1] }}</td>
+                        <td>{{ pig[2] }}</td>
+                        <td>{{ pig[3] }}</td>
+                        <td>{{ pig[4] }}</td>
+                        <td>{{ pig[5] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Pig Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

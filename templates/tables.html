@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Tables</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Database Tables in Public Schema</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section id="table-list">
+            <h2>List of Tables</h2>
+            <ul>
+                {% if tables %}
+                    {% for table in tables %}
+                        <li>Table Name: {{ table[0] }} (Schema: {{ table[1] }})</li>
+                    {% else %}
+                        <li>No tables found in the public schema.</li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pig Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

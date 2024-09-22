@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Sales Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Manage Sales Records</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/manage_employees">Employees</a></li>
+                <li><a href="/manage_feeds">Feeds</a></li>
+                <li><a href="/manage_health">Health</a></li>
+                <li><a href="/manage_sales">Sales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Sales Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sale ID</th>
+                    <th>Pig ID</th>
+                    <th>Sale Date</th>
+                    <th>Buyer Name</th>
+                    <th>Sale Price</th>
+                    <th>Weight at Sale</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in sales %}
+                <tr>
+                    <td>{{ record[0] }}</td> <!-- sale_id -->
+                    <td>{{ record[1] }}</td> <!-- pig_id -->
+                    <td>{{ record[2] }}</td> <!-- sale_date -->
+                    <td>{{ record[3] }}</td> <!-- buyer_name -->
+                    <td>{{ record[4] }}</td> <!-- sale_price -->
+                    <td>{{ record[5] }}</td> <!-- weight_at_sale -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pig Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

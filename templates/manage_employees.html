@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Employees</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Manage Employees</h1>
+        <a href="/add_employee">Add New Employee</a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/manage_employees">Employees</a></li>
+                <li><a href="/manage_feeds">Feeds</a></li>
+                <li><a href="/manage_health">Health</a></li>
+                <li><a href="/manage_sales">Sales</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Employee List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Role</th>
+                    <th>Contact Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                <tr>
+                    <td>{{ employee[0] }}</td> <!-- employee_id -->
+                    <td>{{ employee[1] }}</td> <!-- first_name -->
+                    <td>{{ employee[2] }}</td> <!-- last_name -->
+                    <td>{{ employee[3] }}</td> <!-- role -->
+                    <td>{{ employee[4] }}</td> <!-- contact_number -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pig Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

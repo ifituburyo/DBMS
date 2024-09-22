@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Health Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Manage Health Records</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/manage_employees">Employees</a></li>
+                <li><a href="/manage_feeds">Feeds</a></li>
+                <li><a href="/manage_health">Health</a></li>
+                <li><a href="/manage_sales">Sales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Health Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Health ID</th>
+                    <th>Pig ID</th>
+                    <th>Checkup Date</th>
+                    <th>Health Condition</th>
+                    <th>Treatment</th>
+                    <th>Vet Name</th>
+                    <th>Next Checkup Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in health_records %}
+                <tr>
+                    <td>{{ record[0] }}</td> <!-- health_id -->
+                    <td>{{ record[1] }}</td> <!-- pig_id -->
+                    <td>{{ record[2] }}</td> <!-- checkup_date -->
+                    <td>{{ record[3] }}</td> <!-- health_condition -->
+                    <td>{{ record[4] }}</td> <!-- treatment -->
+                    <td>{{ record[5] }}</td> <!-- vet_name -->
+                    <td>{{ record[6] }}</td> <!-- next_checkup_date -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pig Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

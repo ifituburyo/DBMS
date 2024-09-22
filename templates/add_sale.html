@@ -1,0 +1,30 @@
+<!-- add_sale.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pig Sale</title>
+</head>
+<body>
+    <h1>Add Pig Sale</h1>
+    <form action="/add_pig_sale" method="POST">
+        <label for="pig_id">Pig ID:</label>
+        <input type="number" id="pig_id" name="pig_id" required><br>
+
+        <label for="sale_date">Sale Date:</label>
+        <input type="date" id="sale_date" name="sale_date" required><br>
+
+        <label for="buyer_name">Buyer Name:</label>
+        <input type="text" id="buyer_name" name="buyer_name" required><br>
+
+        <label for="sale_price">Sale Price:</label>
+        <input type="number" step="0.01" id="sale_price" name="sale_price" required><br>
+
+        <label for="weight_at_sale">Weight at Sale:</label>
+        <input type="number" step="0.01" id="weight_at_sale" name="weight_at_sale" required><br>
+
+        <input type="submit" value="Register Sale">
+    </form>
+</body>
+</html>

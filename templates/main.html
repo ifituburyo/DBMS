@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Toolbar (Navigation for CRUD operations) -->
+    <header>
+        <div class="logo">
+            <h1>Pig Management System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Management Buttons -->
+        <section id="management">
+            <h2>Manage Your Pig Farm</h2>
+            <div class="button-group">
+                <button onclick="location.href='/manage_pigs'">Pigs</button>
+                <button onclick="location.href='/manage_employees'">Employees</button>
+                <button onclick="location.href='/manage_feed'">Feed</button>
+                <button onclick="location.href='/manage_health'">Health</button>
+                <button onclick="location.href='/manage_sales'">Sales</button>
+            </div>
+        </section>
+
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to the Pig Management System</h2>
+            <p>Efficiently manage your pig farm with our comprehensive system.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Track pig health and growth</li>
+                <li>Manage feeding schedules</li>
+                <li>Monitor breeding cycles</li>
+                <li>Generate reports and analytics</li>
+            </ul>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>"This system has revolutionized the way we manage our pig farm!" - Farmer John</p>
+            <p>"Highly recommend to anyone in the pig farming industry." - Farmer Jane</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@pigmanagementsystem.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#privacy-policy">Privacy Policy</a> |
+            <a href="#terms">Terms of Service</a> |
+            <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2024 Pig Management System. All rights reserved.</p>
+    </footer>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .button-group {
+            margin: 20px;
+            text-align: center;
+        }
+        .button-group button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .button-group button:hover {
+            background-color: #45a049;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
+</body>
+</html>

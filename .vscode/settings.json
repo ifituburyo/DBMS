@@ -1,0 +1,26 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Connectio11",
+            "database": "PGfarm",
+            "username": "postgres",
+            "password": "izera",
+            "connectionTimeout": 50
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "DATABASE",
+            "database": "PGfarm",
+            "username": "postgres",
+            "password": "izera",
+            "connectionTimeout": 50
+        }
+    ]
+}

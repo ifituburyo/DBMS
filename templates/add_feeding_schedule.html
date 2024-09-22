@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Feeding Schedule</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add Feeding Schedule</h1>
+    
+    <form method="POST">
+        <label for="pig_id">Pig:</label>
+        <select name="pig_id" required>
+            {% for pig in pigs %}
+            <option value="{{ pig[0] }}">{{ pig[1] }}</option>
+            {% endfor %}
+        </select><br>
+        
+        <label for="feed_id">Feed:</label>
+        <select name="feed_id" required>
+            {% for feed in feeds %}
+            <option value="{{ feed[0] }}">{{ feed[1] }}</option>
+            {% endfor %}
+        </select><br>
+        
+        <label for="employee_id">Employee:</label>
+        <select name="employee_id" required>
+            {% for employee in employees %}
+            <option value="{{ employee[0] }}">{{ employee[1] }} {{ employee[2] }}</option>
+            {% endfor %}
+        </select><br>
+        
+        <label for="scheduled_time">Scheduled Time:</label>
+        <input type="datetime-local" name="scheduled_time" required><br>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" required><br>
+        
+        <button type="submit">Add Schedule</button>
+    </form>
+</body>
+</html>

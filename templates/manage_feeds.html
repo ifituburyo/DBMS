@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Feed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Manage Feed</h1>
+    </header>
+    
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feed ID</th>
+                    <th>Feed Type</th>
+                    <th>Quantity (kg)</th>
+                    <th>Feeding Time</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for feed in feed %}
+                    <tr>
+                        <td>{{ feed[0] }}</td>
+                        <td>{{ feed[1] }}</td>
+                        <td>{{ feed[2] }}</td>
+                        <td>{{ feed[3] }}</td>
+                        <td>{{ feed[4] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <div>
+            <button onclick="location.href='/add_feed'">Add New Feed</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Pig Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
